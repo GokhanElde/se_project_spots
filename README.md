@@ -19,7 +19,7 @@ This project is a responsive web page built based on a Figma design provided as 
 
 ## Preview
 
-Video LINK will be there after first review.
+[Drive Link] https://drive.google.com/file/d/1q4lIx4I9lacGGWwBGnfGUHDhs1QIwhis/view?usp=drive_link
 
 ## Deployment
 
