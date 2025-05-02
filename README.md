@@ -21,6 +21,10 @@ This project is a responsive web page built based on a Figma design provided as 
 
 Video LINK will be there after first review.
 
+## Deployment
+
+Webpage is deployed to GitHub Pages
+
 ## Author
 
 Gokhan Eldeleklioglu
