@@ -23,7 +23,9 @@ Video LINK will be there after first review.
 
 ## Deployment
 
-Webpage is deployed to GitHub Pages
+Webpage is deployed to GitHub Pages;
+
+**[Deployment link]** (https://ciddan72.github.io/se_project_spots/)
 
 ## Author
 
