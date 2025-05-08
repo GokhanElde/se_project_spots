@@ -1,0 +1,129 @@
+.modal {
+  visibility: hidden;
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  padding-top: 96px;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  max-width: 730px;
+  width: 100%;
+  height: 408px;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 32px 50px;
+  position: relative;
+  gap: 32px;
+  border-radius: 8px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #fff;
+}
+
+.modal__close-icon {
+  width: 22.63px;
+  height: 22.63px;
+  border: none;
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  width: 100%;
+  height: 40px;
+  gap: 421px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  letter-spacing: 0%;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.modal__label {
+  margin: 0 0 32px;
+  font-size: 16px;
+  color: #212121;
+  opacity: 0.7;
+  width: 100%;
+  height: 78px;
+  gap: 8px;
+  line-height: 110.00000000000001%;
+  letter-spacing: 0%;
+  font-weight: 500;
+}
+
+.modal__input {
+  display: block;
+  margin: 8px 0 0;
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  box-sizing: border-box;
+}
+
+.modal__input::placeholder {
+  color: #212121;
+  opacity: 0.3;
+  width: 255px;
+  height: 20px;
+}
+
+.modal__submit-btn {
+  background-color: #212121;
+  max-width: 156px;
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 320px) {
+  .modal {
+    max-width: 300px;
+    top: 134px;
+    left: 10px;
+    border-radius: 8px;
+  }
+
+  .modal__submit-btn {
+    max-width: 100%;
+    height: 52px;
+  }
+
+  .modal__title {
+    justify-content: space-between;
+    font-size: 20px;
+  }
+
+  .modal__form {
+    width: 276px;
+  }
+}
