@@ -29,4 +29,4 @@ Webpage is deployed to GitHub Pages;
 
 ## Author
 
-Gokhan Eldeleklioglu
+-Gokhan Eldeleklioglu-
