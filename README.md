@@ -25,7 +25,7 @@ This project is a responsive web page built based on a Figma design provided as 
 
 Webpage is deployed to GitHub Pages;
 
-**[Deployment link]** (https://ciddan72.github.io/se_project_spots/)
+**[Deployment link]** (https://gokhanelde.github.io/se_project_spots/)
 
 ## Author
 
