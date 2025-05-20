@@ -68,6 +68,7 @@
 
 .profile__edit-btn:hover {
   opacity: 1;
+  cursor: url("../images/cursor.png") 0 0, pointer;
 }
 
 .profile__new-post-btn {
@@ -91,6 +92,7 @@
 
 .profile__new-post-btn:hover {
   opacity: 0.8;
+  cursor: url("../images/cursor.png") 0 0, pointer;
 }
 
 .profile__edit-icon {

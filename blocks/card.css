@@ -29,6 +29,7 @@
 .card__like-btn:hover {
   cursor: pointer;
   opacity: 1;
+  cursor: url("../images/cursor.png") 0 0, pointer;
 }
 
 .card__title {
