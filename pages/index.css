@@ -8,3 +8,10 @@
 @import url(../blocks/card.css);
 @import url(../blocks/footer.css);
 @import url(../blocks/modal.css);
+
+button,
+textarea,
+input,
+close-btn {
+  cursor: url("../images/cursor.png");
+}
