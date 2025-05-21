@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  padding-top: 96px;
+  padding: 10px;
   transition: visibility 0s linear 0.5s, opacity 0.5s ease-in-out;
   opacity: 0;
 }
@@ -24,13 +24,12 @@
 .modal__container {
   max-width: 730px;
   width: 100%;
-  height: 408px;
+  box-sizing: border-box;
   border-radius: 8px;
   background-color: #fff;
   padding: 32px 50px;
   position: relative;
   gap: 24px;
-  border-radius: 8px;
 }
 
 .modal__close-btn {
@@ -41,34 +40,29 @@
   height: 40px;
   border: none;
   background-color: #fff;
-  cursor: url("../images/cursor.png"), pointer;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #212121;
+  opacity: 0.4;
 }
 
 .modal__close-btn:hover {
   cursor: pointer;
-  content: url(../images/close-icon-dark2.svg);
+  opacity: 1;
 }
 
 .modal__close-icon {
   width: 40px;
   height: 40px;
   border: none;
-  color: #212121;
 }
 
 .modal__title {
   margin: 0 0 32px;
   width: 100%;
-  height: 40px;
-  gap: 421px;
-  display: flex;
   justify-content: space-between;
   font-size: 32px;
-  letter-spacing: 0%;
   line-height: 100%;
   font-weight: 500;
 }
@@ -76,20 +70,17 @@
 .modal__form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   gap: 20px;
-  top: 32px;
 }
 
 .modal__label {
   margin: 0 0 32px;
   font-size: 16px;
-  color: #212121;
-  opacity: 0.7;
+  color: rgba(33, 33, 33, 0.7);
   width: 100%;
-  height: 78px;
-  line-height: 110.00000000000001%;
-  letter-spacing: 0%;
+  line-height: 110%;
   font-weight: 500;
 }
 
@@ -104,17 +95,18 @@
   cursor: pointer;
   font-weight: 500;
   padding-left: 12px;
+  font-size: 20px;
+  line-height: 100%;
+  color: #212121;
 }
 
 .modal__input:hover {
-  border: 1px solid #212121;
+  border: 1px solid rgba(33, 33, 33, 1);
 }
 
 .modal__input::placeholder {
-  color: #212121;
-  opacity: 0.3;
-  width: 255px;
-  height: 20px;
+  color: rgba(33, 33, 33, 0.3);
+  font-weight: 500;
 }
 
 .modal__submit-btn {
@@ -123,41 +115,33 @@
   height: 52px;
   border-radius: 8px;
   border: none;
-  color: #fff;
+  color: #fcf5e5;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
 }
 
-@media screen and (max-width: 320px) {
+.modal__submit-btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 627px) {
   .modal {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 96px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000080;
     max-width: none;
-    height: 336px;
   }
 
   .modal__container {
     width: 300px;
-    padding: 12px 24px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-sizing: border-box;
+    padding: 22px 12px 12px;
     margin: 0 auto;
   }
 
   .modal__title {
     font-size: 20px;
-    justify-content: space-between;
-    top: 12px;
     display: flex;
     align-items: center;
   }
@@ -165,15 +149,11 @@
   .modal__form {
     max-width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
     box-sizing: border-box;
   }
 
   .modal__input {
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 16px;
   }
 
   .modal__submit-btn {
