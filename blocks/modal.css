@@ -29,7 +29,6 @@
   background-color: #fff;
   padding: 32px 50px;
   position: relative;
-  gap: 24px;
 }
 
 .modal__close-btn {
@@ -61,7 +60,7 @@
 .modal__title {
   margin: 0 0 32px;
   width: 100%;
-  justify-content: space-between;
+  color: #212121;
   font-size: 32px;
   line-height: 100%;
   font-weight: 500;
@@ -72,7 +71,6 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  gap: 20px;
 }
 
 .modal__label {
@@ -106,7 +104,6 @@
 
 .modal__input::placeholder {
   color: rgba(33, 33, 33, 0.3);
-  font-weight: 500;
 }
 
 .modal__submit-btn {
@@ -128,27 +125,22 @@
 
 @media screen and (max-width: 627px) {
   .modal {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     max-width: none;
   }
 
   .modal__container {
     width: 300px;
     padding: 22px 12px 12px;
-    margin: 0 auto;
+    margin: auto;
   }
 
   .modal__title {
     font-size: 20px;
-    display: flex;
-    align-items: center;
   }
 
   .modal__form {
     max-width: 100%;
-    margin: 0 auto;
+    margin: auto;
     box-sizing: border-box;
   }
 
@@ -158,7 +150,6 @@
 
   .modal__submit-btn {
     width: 100%;
-    height: 52px;
     box-sizing: border-box;
   }
 
