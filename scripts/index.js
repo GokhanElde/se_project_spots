@@ -90,12 +90,21 @@ function renderCard(item, method = "prepend") {
   cardsList[method](cardElement);
 }
 
+function handleEscKey(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) closeModal(openedModal);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscKey);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -127,8 +136,7 @@ function handleNewPostSubmit(evt) {
 
   renderCard(inputValues);
 
-  newPostCaptionInput.value = "";
-  newPostImageInput.value = "";
+  newPostForm.reset();
 
   closeModal(newPostModal);
 }
@@ -146,5 +154,20 @@ closeButtons.forEach((button) => {
 
   button.addEventListener("click", () => {
     closeModal(modal);
+
+    const form = modal.querySelector(".modal__form");
+    if (form) {
+      resetValidation(form);
+      if (modal === newPostModal) {
+        form.reset();
+      }
+    }
+  });
+});
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (e) => {
+    if (e.target === modal) {
+      closeModal(modal);
+    }
   });
 });
