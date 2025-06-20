@@ -55,7 +55,7 @@
   opacity: 1;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   position: absolute;
   top: 0;
   right: -52.5px;
@@ -70,7 +70,7 @@
   opacity: 1;
 }
 
-.modal__close_type_preview:hover {
+.modal__close-btn_type_preview:hover {
   opacity: 0.4;
 }
 
@@ -232,7 +232,7 @@
 }
 
 @media screen and (max-width: 627px) {
-  .modal__close_type_preview {
+  .modal__close-btn_type_preview {
     position: absolute;
     top: -48px;
     right: 0;

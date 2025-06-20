@@ -12,6 +12,6 @@
 button,
 textarea,
 input,
-close-btn {
+.modal__close-btn {
   cursor: url("../images/cursor.png");
 }

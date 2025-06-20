@@ -110,6 +110,7 @@ function closeModal(modal) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileForm, settings);
   openModal(editProfileModal);
 });
 
@@ -137,7 +138,7 @@ function handleNewPostSubmit(evt) {
   renderCard(inputValues);
 
   newPostForm.reset();
-
+  resetValidation(newPostForm, settings);
   closeModal(newPostModal);
 }
 
@@ -157,10 +158,7 @@ closeButtons.forEach((button) => {
 
     const form = modal.querySelector(".modal__form");
     if (form) {
-      resetValidation(form);
-      if (modal === newPostModal) {
-        form.reset();
-      }
+      resetValidation(form, settings);
     }
   });
 });
