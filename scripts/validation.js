@@ -28,9 +28,7 @@ const checkInputValidity = (formEl, inputEl, config) => {
 };
 
 const hasInvalidInput = (inputList) => {
-  return inputList.some((input) => {
-    return !input.validity.valid;
-  });
+  return inputList.some((input) => !input.validity.valid);
 };
 
 const toggleButtonState = (inputList, buttonEl, config) => {
@@ -43,27 +41,25 @@ const toggleButtonState = (inputList, buttonEl, config) => {
   }
 };
 
-const resetValidation = (formEl, config) => {
+const getFormElements = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonEl = formEl.querySelector(config.submitButtonSelector);
+  return { inputList, buttonEl };
+};
 
-  inputList.forEach((input) => {
-    hideInputError(formEl, input, config);
-  });
-
+const resetValidation = (formEl, config) => {
+  const { inputList, buttonEl } = getFormElements(formEl, config);
+  inputList.forEach((input) => hideInputError(formEl, input, config));
   toggleButtonState(inputList, buttonEl, config);
 };
 
 const setEventListeners = (formEl, config) => {
-  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
-  const buttonElement = formEl.querySelector(config.submitButtonSelector);
-
-  toggleButtonState(inputList, buttonElement, config);
-
+  const { inputList, buttonEl } = getFormElements(formEl, config);
+  toggleButtonState(inputList, buttonEl, config);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formEl, inputElement, config);
-      toggleButtonState(inputList, buttonElement, config);
+      toggleButtonState(inputList, buttonEl, config);
     });
   });
 };
