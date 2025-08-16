@@ -8,9 +8,3 @@
 @import url(../blocks/card.css);
 @import url(../blocks/footer.css);
 @import url(../blocks/modal.css);
-
-button,
-textarea,
-input {
-  cursor: url("../images/cursor.png");
-}
